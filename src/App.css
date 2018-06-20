@@ -1,0 +1,83 @@
+body{
+	margin: 0;
+	margin-top: 60px;
+	padding: 0;
+}
+.client-global-header{
+	background: #000000aa;
+	color: #eee;
+	padding: 1em;
+	margin: 0;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+#usr_btn{
+	float: right;
+	margin-right: 3em;
+}
+.login-form{
+	position: fixed;
+	top: 45%;
+	left: 35%;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	justify-self: center;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #ffffff;
+	border-radius: 4px;
+	background: #ffffff;
+	color: #979797;
+	box-shadow: 0 0 10px 1px #000000ad, 0px 5px 13px 5px #0000002c;
+	z-index: 100;
+}
+.login-form:after{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #000000aa;
+	content: '';
+	z-index: -100;
+	-webkit-backdrop-filter: blur(21px);
+    backdrop-filter: blur(21px);
+}
+.coursel_container{
+	display: flex;
+	width: 100%;
+	min-height: 13vh;
+	height: fit-content;
+	border: 1px solid;
+	text-align: center;
+	justify-content: center;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 2em 0 2em 0;
+}
+.coursel_obj{
+	margin: 0 2% 0 2%;
+	padding: 2em;
+	border: 1px solid;
+	border-radius: 4px;
+	min-width: 75vw;
+	max-width: 80vw;
+	box-shadow: 0 0 5px 1px #000000a3;
+	animation: coursel infinite alternate cubic-bezier(0.6, -0.2, 0.4, 1.2) 30s;
+}
+.coursel_btn{
+	height: 5em;
+	width: 5em;
+	background: #ffffff22;
+	border-radius: 100%;
+}
+@keyframes coursel{
+	0% {transform: translateX(-104%)}
+	100% {transform: translateX(104%)}
+}

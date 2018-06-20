@@ -1,0 +1,12 @@
+var crypto=require('crypto-js');
+var message='password';
+console.log('The message is: '+message);
+var hash=crypto.SHA256(message);
+var hash_str=hash.toString(crypto.enc.HEX);
+console.log('Hash, which will act as encryption key is: '+hash_str);
+var encrypted=crypto.AES.encrypt(message,hash_str);
+var encrypted_str=encrypted.toString(crypto.enc.HEX);
+console.log('encrypted string is: '+encrypted_str);
+var decrypted=crypto.AES.decrypt(encrypted_str,hash_str);
+var decrypted_str=decrypted.toString(crypto.enc.Utf8);
+console.log('The decrypted string is: '+decrypted_str);

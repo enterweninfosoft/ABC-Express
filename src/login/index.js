@@ -4,7 +4,6 @@ import {customInput} from './fields'
 class RegisterComponent extends Component{
 	render(){
 		const {handleSubmit}=this.props
-		const {hashPassword}=this.props
 		return(
 			<form onSubmit={handleSubmit} className='login-form'>
 				<Field name="name" component={customInput} type="text" label="First Name" autoFocus="true" />

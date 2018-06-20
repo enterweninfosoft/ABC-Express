@@ -29,7 +29,7 @@ export const randomBool=()=>Math.ceil(Math.random()*100)%2
 export const encode=s=>{
 	let len=s.length;
 	let exp=0;
-	while(parseInt(len)){
+	while(parseInt(len,10)){
 		len/=10;
 		exp+=10;
 	}

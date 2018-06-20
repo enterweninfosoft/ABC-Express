@@ -3,13 +3,6 @@ import './App.css'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import RegisterForm from './login'
 import {postData,random,encode} from './utils'
-import SHA256 from 'crypto-js/sha256'
-import AES from 'crypto-js/aes'
-/*import WordArray from 'crypto-js/lib-typedarrays'
-import encHEX from 'crypto-js/enc-hex'
-import encUTF8 from 'crypto-js/enc-utf8'
-import enc64 from 'crypto-js/enc-base64'
-*/
 import crypto from 'crypto-js'
 export class Name extends Component{
 	constructor(props=null){
@@ -48,7 +41,7 @@ export class HeaderApp extends Component {
 					send['key']=encoded_key
 					send['iv']=password.iv.toString(crypto.enc.HEX)
 					console.log('iv is: '+password.iv.toString(crypto.enc.HEX))
-					console.log(AES.decrypt(password,key).toString(crypto.enc.Utf8))
+					console.log(crypto.AES.decrypt(password,key).toString(crypto.enc.Utf8))
 					postData('http://0.0.0.0:5000/users/admin_',send).then(data=>console.log(data))
 					window.alert(JSON.stringify(values,null,4))}}/>} />
 	  		</header>
